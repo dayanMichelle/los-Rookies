@@ -1,13 +1,15 @@
 import React from "react";
-import { Banner } from "@/components";
-import { Form } from "@/components/form";
+import { Banner, Form, Logo } from "@/components";
 import styles from "./Votacion.module.css";
 
 const Votacion = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.containerPage}>
       <Banner />
-      <Form />
+      <div className={styles.container}>
+        <Logo fontSize="64px" />
+        <Form />
+      </div>
     </div>
   );
 };
