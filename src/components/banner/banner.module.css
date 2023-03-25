@@ -1,0 +1,9 @@
+.banner {
+  height: 100vh;
+  display: block;
+}
+@media (max-width: 1160px) {
+  .banner {
+    display: none;
+  }
+}
