@@ -33,6 +33,7 @@ const Form = () => {
             required
             value={codigoInput}
             onChange={handleChange}
+            inputMode="numeric"
           />
         </label>
         <input
