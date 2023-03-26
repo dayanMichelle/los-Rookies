@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  position: fixed;
+  padding: 20px 25px;
+}
+.list {
+  display: flex;
+  gap: 20px;
+}
+.link {
+  cursor: pointer;
+  transition: all 1s ease-out;
+}
+.link:hover {
+  border-bottom: 1px solid #730cc3;
+}
