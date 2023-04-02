@@ -1,17 +1,28 @@
 "use client";
+
 import React, { useState } from "react";
-import styles from "./LoginForm.module.css";
 import { useRouter } from "next/navigation";
+import { loginService } from "@/services/auth";
+import styles from "./LoginForm.module.css";
 
 const LoginForm = () => {
-  const [correo, setCorreo] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    password === correo && router.push("/admin/");
+    const { data, error } = await loginService({
+      email,
+      password,
+    });
+
+    if (error) {
+      return console.log(error);
+    }
+    console.log(data);
+    router.push("/admin/");
   };
 
   return (
@@ -24,8 +35,8 @@ const LoginForm = () => {
             id="correo"
             type="text"
             placeholder="ingrese el correo"
-            value={correo}
-            onChange={(e) => setCorreo(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </label>
@@ -35,7 +46,7 @@ const LoginForm = () => {
             className={styles.codigo}
             id="password"
             type="password"
-            placeholder="ingrese el correo"
+            placeholder="ingrese la contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
