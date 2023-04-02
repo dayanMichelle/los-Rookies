@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  align-content: space-between;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  margin: 0 auto;
+}
+.form {
+  max-width: 700px;
+  margin: 100px auto;
+}
+.form > fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+}
+.form > fieldset > label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form .codigo {
+  width: 400px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+}
+.form .codigo::placeholder {
+  color: rgb(149, 147, 147);
+  padding-left: 10px;
+}
+.form .codigo:focus {
+  border: 1px solid #730cc3;
+}
+
+.submit {
+  height: 30px;
+}
+.submit:hover {
+  cursor: pointer;
+  background-color: #730cc3;
+  color: white;
+  transition: ease 0.3s;
+  border: none;
+}
