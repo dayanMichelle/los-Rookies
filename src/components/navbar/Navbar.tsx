@@ -1,6 +1,6 @@
 import React from "react";
-import { Logo } from "../logo";
 import Link from "next/link";
+import { Logo } from "@/components";
 import styles from "./Navbar.module.css";
 
 export const Navbar = () => {

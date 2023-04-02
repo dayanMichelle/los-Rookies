@@ -1,6 +1,4 @@
-"use client";
-import React, { useState } from "react";
-import Card from "../card/Card";
+import { Card } from "@/components";
 import styles from "./CardList.module.css";
 
 type CardListProps = {
@@ -10,14 +8,20 @@ type CardListProps = {
     photo: string;
   }[];
 };
-const CardList = ({ cards }: CardListProps) => {
+
+export const CardList = ({ cards }: CardListProps) => {
   return (
     <div className={styles.container}>
       {cards.map(({ id, instaName, photo }) => (
-        <Card key={id} id={id} instaName={instaName} photo={photo} />
+        <Card
+          key={id}
+          select={0}
+          id={id}
+          instaName={instaName}
+          photo={photo}
+          handleClick={() => {}}
+        />
       ))}
     </div>
   );
 };
-
-export default CardList;

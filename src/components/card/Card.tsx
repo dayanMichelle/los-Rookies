@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import styles from "./Card.module.css";
 
 type CardProps = {
@@ -9,7 +8,8 @@ type CardProps = {
   handleClick: (id: number) => void;
   select: number;
 };
-const Card = ({
+
+export const Card = ({
   select,
   id,
   instaName = "@lola_funny",
@@ -17,10 +17,10 @@ const Card = ({
   handleClick,
 }: CardProps) => {
   const styleImage = select === id ? { border: "2px blue solid" } : {};
+
   return (
     <div className={styles.card}>
       <h4>{instaName}</h4>
-
       <Image
         style={styleImage}
         onClick={() => handleClick(id)}
@@ -33,5 +33,3 @@ const Card = ({
     </div>
   );
 };
-
-export default Card;

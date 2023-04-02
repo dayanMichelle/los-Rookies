@@ -1,1 +1,1 @@
-export * from "./AddEvent";
+export { default as AddEvent } from "./AddEvent";

@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "./Form.module.css";
 import { useRouter } from "next/navigation";
+import styles from "./Form.module.css";
 
 const Form = () => {
   const [codigoInput, setCodigoInput] = useState("");
@@ -12,11 +12,13 @@ const Form = () => {
     e.preventDefault();
     codigoInput.length === 6 && router.push(`/votacion/${codigoInput}`);
   };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const codigoInput = e.target.value;
     const pattern = new RegExp(/^[0-9]+$/);
     pattern.test(codigoInput) && setCodigoInput(codigoInput);
   };
+
   return (
     <form action="" onSubmit={handleSubmit} className={styles.form}>
       <fieldset>

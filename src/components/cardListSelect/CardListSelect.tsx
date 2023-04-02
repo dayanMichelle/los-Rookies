@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import Card from "../card/Card";
+import { useState } from "react";
+import { Card } from "@/components";
 import styles from "./CardList.module.css";
 
 type CardListProps = {
@@ -10,12 +10,14 @@ type CardListProps = {
     photo: string;
   }[];
 };
+
 const CardListSelect = ({ cards }: CardListProps) => {
   const [select, setSelect] = useState(1);
 
   const handleClick = (id: number) => {
     setSelect(id);
   };
+
   return (
     <div className={styles.container}>
       {cards.map(({ id, instaName, photo }) => (

@@ -1,6 +1,6 @@
-import React from "react";
-import Evento from "../evento/Evento";
+import { Evento } from "@/components";
 import styles from "./ListEvents.module.css";
+
 type ListEventsProps = {
   events: {
     nombre: string;
@@ -8,6 +8,7 @@ type ListEventsProps = {
     ganador: string;
   }[];
 };
+
 const ListEvents = ({ events }: ListEventsProps) => {
   return (
     <div className={styles.container}>

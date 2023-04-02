@@ -1,7 +1,8 @@
 "use client";
+
 import React from "react";
+import { CardList } from "@/components";
 import styles from "./AddEvent.module.css";
-import CardList from "../cardList/CardList";
 
 const cards = [
   {

@@ -1,7 +1,5 @@
-import Card from "@/components/card/Card";
-import CardList from "@/components/cardList/CardList";
-import CardListSelect from "@/components/cardListSelect/CardListSelect";
-import React from "react";
+import { CardListSelect } from "@/components/";
+
 const cards = [
   {
     id: 1,
@@ -26,9 +24,5 @@ const cards = [
 ];
 
 export default function page() {
-  return (
-    <>
-      <CardListSelect cards={cards} />
-    </>
-  );
+  return <CardListSelect cards={cards} />;
 }

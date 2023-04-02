@@ -1,1 +1,1 @@
-export * from "./CardListSelect";
+export { default as CardListSelect } from "./CardListSelect";
