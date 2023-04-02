@@ -71,13 +71,18 @@ const Admin = () => {
     <div className={style.container}>
       <button className={style.buttonAdd}>+ agregar evento</button>
       <div>
-        <section className={style.programados}>
+        <section>
           <h4>Eventos programados</h4>
-          <ListEvents events={eventosRealizados} />
+          <div className={style.programados}>
+            <ListEvents events={eventosProgramados} />
+          </div>
         </section>
-        <section className={style.programados}>
-          <h4>Eventos Realizados</h4>
-          <ListEvents events={eventosProgramados} />
+        <hr style={{ marginTop: "20px" }} />
+        <section>
+          <h4 className={style.title}>Eventos Realizados</h4>
+          <div className={style.programados}>
+            <ListEvents events={eventosRealizados} />
+          </div>
         </section>
       </div>
     </div>

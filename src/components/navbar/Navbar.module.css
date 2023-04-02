@@ -4,6 +4,7 @@
   justify-content: space-between;
   position: fixed;
   padding: 20px 25px;
+  align-items: center;
 }
 .list {
   display: flex;

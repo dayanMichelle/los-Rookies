@@ -2,7 +2,11 @@ import React from "react";
 import Evento from "../evento/Evento";
 import styles from "./ListEvents.module.css";
 type ListEventsProps = {
-  events: [];
+  events: {
+    nombre: string;
+    fecha: string;
+    ganador: string;
+  }[];
 };
 const ListEvents = ({ events }: ListEventsProps) => {
   return (
