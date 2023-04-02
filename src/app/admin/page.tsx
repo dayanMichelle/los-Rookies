@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
-import style from "./Admin.module.css";
-import ListEvents from "@/components/listEvents/ListEvents";
+
 import { useRouter } from "next/navigation";
+import { ListEvents } from "@/components";
+import style from "./Admin.module.css";
 
 const eventosRealizados = [
   {
@@ -46,6 +46,7 @@ const eventosRealizados = [
     ganador: "Oscar Wilde",
   },
 ];
+
 const eventosProgramados = [
   {
     nombre: "La noche hoy",
@@ -73,6 +74,8 @@ const Admin = () => {
 
   return (
     <div className={style.container}>
+      {/* TODO: Crear un componente button para dejar esta page como server
+      component */}
       <button
         onClick={() => router.push("admin/evento")}
         className={style.buttonAdd}
